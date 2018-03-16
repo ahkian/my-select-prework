@@ -2,7 +2,9 @@ def my_select(collection)
  i = 0
  true_arr = []
  while i < collection.length
-   true_arr << (yield collection[i])
+    if (yield collection[i]) == true
+      true_arr << collection[i]
+    end
    i += 1
  end
  true_arr
